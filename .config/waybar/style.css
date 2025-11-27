@@ -1,0 +1,108 @@
+/* otf-font-awesome and SpaceMono Nerd Font are required to be installed for icons */
+
+* {
+    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease-out;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.633);
+    color: #ffffff;
+    font-family: "SpaceMono Nerd Font", feather;
+    transition: background-color 0.5s;
+}
+
+/* Containers */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 4px 10px;
+    border-radius: 15px;
+}
+
+.modules-center {
+    padding: 2px;
+}
+
+/* Shared module styling */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#mpd {
+    padding: 0 10px;
+    border-radius: 15px;
+    transition: color 0.5s, transform 0.5s;
+}
+
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#tray:hover,
+#mode:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#language:hover,
+#mpd:hover {
+    color: rgb(71, 255, 255);
+}
+
+/* Workspaces */
+#workspaces {
+    border-radius: 15px;
+    background-color: rgba(17, 17, 27, 0.319);
+    padding: 0 15px;
+}
+
+#workspaces button {
+    background: transparent;
+    border: none;
+    border-radius: 15px;
+    color: rgb(185, 185, 185);
+    font-family: "SpaceMono Nerd Font", feather;
+    font-weight: 900;
+    padding: 0 10px;
+}
+
+#workspaces button.active {
+    color: cyan;
+}
+
+#workspaces button:hover {
+    color: #1aeefa;
+}
+
+/* Custom arch icon */
+#custom-arch {
+    margin-left: 5px;
+    padding: 0 20px 0 5px;
+    font-size: 25px;
+    transition: color 0.5s;
+}
+
+#custom-arch:hover {
+    color: #1793d1;
+}

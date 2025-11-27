@@ -1,0 +1,93 @@
+{
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": true,
+        "tooltip-format": "This is Arch btw",
+        "on-click": "/home/tinted/.local/share/scripts/wofi.sh"
+    },
+
+    "custom/dgpu-state": {
+        "exec": "cat /sys/bus/pci/devices/0000:01:00.0/power/runtime_status",
+        "interval": 5,
+        "format": "   󰍹   {}",
+        "on-click": "alacritty -e vim /path/to/your/file.txt"
+    },
+
+    "custom/brightness": {
+        "exec": "brightnessctl i | grep -oP '\\(\\K[^%]+'",
+        "interval": 2,
+        "format": "   {}%",
+        "tooltip": true,
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "on-click": "notify-send 'Brightness' 'Use scroll wheel to adjust brightness'",
+        "exec-if": "which brightnessctl"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{essid} - {gwaddr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "󰖪",
+        "on-click": "networkmanager_dmenu"
+    },
+
+    "temperature": {
+        "interval": 10,
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
+        "critical-threshold": 100,
+        "format-critical": " {temperatureC}",
+        "format": "  {temperatureC}°C"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-full": "{icon}  {capacity}%",
+        "format-charging": "󱐋  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{capacity}  {icon}",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰂀", "󰁹"]
+    },
+
+    "clock": {
+        "tooltip": false,
+        "format": "{:%I:%M  |  %e %B}",
+        "format-alt": "{:%Y-%m-%d}"
+    }
+}
