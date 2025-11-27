@@ -3,7 +3,7 @@
         "format": "󰣇",
         "tooltip": true,
         "tooltip-format": "This is Arch btw",
-        "on-click": "/home/tinted/.local/share/scripts/wofi.sh"
+        "on-click": "wofi --show drun"
     },
 
     "custom/dgpu-state": {
