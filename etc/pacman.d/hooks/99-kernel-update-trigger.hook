@@ -1,0 +1,20 @@
+# ========================================
+# Tinted Hyprland
+# Author: TintedMage (https://github.com/TintedMage)
+# Pacman: /etc/pacman.d/hooks/99-kernel-update-trigger.hook
+# ========================================
+
+## /etc/pacman.d/hooks/99-kernel-update-trigger.hook
+
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = linux
+Target = linux-headers
+
+[Action]
+Description = Creating post-reboot trigger file...
+When = PostTransaction
+Exec = /usr/bin/touch /etc/update_linuwu_sense
