@@ -1,3 +1,9 @@
+# ========================================
+# Tinted Hyprland
+# Author: TintedMage (https://github.com/TintedMage)
+# Mako: ~/.config/mako/config
+# ========================================
+
 sort=-time
 layer=overlay
 background-color=#22222210
