@@ -1,3 +1,9 @@
+-- ========================================
+-- Tinted Hyprland
+-- Author: TintedMage (https://github.com/TintedMage)
+-- Neovim: ~/.config/nvim/lua/user/options.lua
+-- ========================================
+
 local opt = vim.opt
 
 -- Aesthetic/UI

@@ -1,6 +1,10 @@
--- ~/.config/nvim/lua/user/plugins.lua
+-- ========================================
+-- Tinted Hyprland
+-- Author: TintedMage (https://github.com/TintedMage)
+-- Neovim: ~/.config/nvim/lua/user/plugins.lua
+-- ========================================
 
---------------------------------------------------
+-- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -14,84 +18,99 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
---------------------------------------------------
+-- Plugin setup
 require("lazy").setup({
-  -- 1. Colorscheme
-  { "folke/tokyonight.nvim",
-    lazy = false, -- Colorschemes should load early
+  -- ========================================
+  -- Colorschemes
+  -- ========================================
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
     config = function()
-      -- TokyoNight has variants. 'storm' is a great minimal dark variant.
       require("tokyonight").setup({
-        style = "night", -- or 'night', 'moon', 'day'
-        transparent = true, -- Optional: If you want transparency built-in
+        style = "night",
+        transparent = true,
         terminal_colors = true,
       })
-      vim.cmd('colorscheme tokyonight-night')
+      vim.cmd("colorscheme tokyonight-night")
     end,
   },
 
-  -- 2. Treesitter (For beautiful, accurate highlighting)
-  { 'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
+  -- ========================================
+  -- Syntax and Highlighting
+  -- ========================================
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
     opts = {
       highlight = { enable = true },
       indent = { enable = true },
-      ensure_installed = { 'lua', 'vim', 'html', 'css', 'javascript', 'c', 'python' },
+      ensure_installed = { "lua", "vim", "html", "css", "javascript", "c", "python" },
     },
   },
 
-  -- 3. Lualine (Clean statusline)
-  { 'nvim-lualine/lualine.nvim',
+  -- ========================================
+  -- UI Enhancements
+  -- ========================================
+  {
+    "nvim-lualine/lualine.nvim",
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'palenight',
-        section_separators = { left = '', right = '' },
-        component_separators = { left = '', right = '' },
+        theme = "palenight",
+        section_separators = { left = "", right = "" },
+        component_separators = { left = "", right = "" },
       },
     },
   },
 
-  -- 4. Telescope (Fuzzy Finder for fast file navigation)
-  { 'nvim-telescope/telescope.nvim',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      local builtin = require('telescope.builtin')
-      vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find Files' })
-      vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Live Grep' })
-      vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Find Buffers' })
-    end
-  },
-
-  -- 5. Barbar (Bufferline)
-  {'romgrk/barbar.nvim',
+  {
+    "romgrk/barbar.nvim",
     dependencies = {
-      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+      "lewis6991/gitsigns.nvim",
+      "nvim-tree/nvim-web-devicons",
     },
-    init = function() vim.g.barbar_auto_setup = false end,
-    opts = {
-      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-      -- animation = true,
-      -- insert_at_start = true,
-      -- …etc.
-    },
-    version = '^1.0.0', -- optional: only update when a new 1.x version is released
+    init = function()
+      vim.g.barbar_auto_setup = false
+    end,
+    opts = {},
+    version = "^1.0.0",
   },
 
-  -- 6. Comment.nvim (Easy comment/uncomment toggling)
-  { 'numToStr/Comment.nvim',
-    dependencies = { 'nvim-web-devicons' },
-    event = 'BufEnter',
+  -- ========================================
+  -- Navigation
+  -- ========================================
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require('Comment').setup()
-      
-      -- Map Ctrl + / and Ctrl + _ to the line-wise comment toggle
-      vim.keymap.set({'n', 'v'}, '<C-/>', '<Plug>(comment_toggle_linewise_current)', { noremap = true, silent = true, desc = 'Toggle Line Comment' })
-      vim.keymap.set({'n', 'v'}, '<C-_>', '<Plug>(comment_toggle_linewise_current)', { noremap = true, silent = true, desc = 'Toggle Line Comment' })
-    end
+      local builtin = require("telescope.builtin")
+      vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
+      vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live Grep" })
+      vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
+    end,
   },
 
-
-}) -- Correctly closes the table ({...}) and the setup function (setup(...))
+  -- ========================================
+  -- Utilities
+  -- ========================================
+  {
+    "numToStr/Comment.nvim",
+    dependencies = { "nvim-web-devicons" },
+    event = "BufEnter",
+    config = function()
+      require("Comment").setup()
+      vim.keymap.set({ "n", "v" }, "<C-/>", "<Plug>(comment_toggle_linewise_current)", {
+        noremap = true,
+        silent = true,
+        desc = "Toggle Line Comment",
+      })
+      vim.keymap.set({ "n", "v" }, "<C-_>", "<Plug>(comment_toggle_linewise_current)", {
+        noremap = true,
+        silent = true,
+        desc = "Toggle Line Comment",
+      })
+    end,
+  },
+})

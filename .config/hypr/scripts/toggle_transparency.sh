@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# ========================================
+# Tinted Hyprland
+# Author: TintedMage (https://github.com/TintedMage)
+# Hyprland: ~/.config/hypr/scripts/toggle_transparency.sh
+# ========================================
+
 # Get the current blur state
 BLUR_STATE=$(hyprctl getoption decoration:blur:enabled | grep "int:" | awk '{print $2}')
 

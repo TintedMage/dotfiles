@@ -1,4 +1,9 @@
-// -*- mode: jsonc -*-
+// ========================================
+// Tinted Hyprland
+// Author: TintedMage (https://github.com/TintedMage)
+// Waybar Config: ~/.config/waybar/config.jsonc
+// ========================================
+
 {
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)

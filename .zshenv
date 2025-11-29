@@ -1,3 +1,9 @@
+# ========================================
+# Tinted Hyprland
+# Author: TintedMage (https://github.com/TintedMage)
+# Zsh: ~/.zshenv
+# ========================================
+
 export ZDOTDIR="$HOME/.config/zsh"
 
 export XDG_CONFIG_HOME="$HOME/.config"

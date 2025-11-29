@@ -1,3 +1,9 @@
+# ========================================
+# Tinted Hyprland
+# Author: TintedMage (https://github.com/TintedMage)
+# Starship: ~/.config/starship.toml
+# ========================================
+
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """

@@ -1,3 +1,9 @@
+-- ========================================
+-- Tinted Hyprland
+-- Author: TintedMage (https://github.com/TintedMage)
+-- Neovim: ~/.config/nvim/init.lua
+-- ========================================
+
 -- Set the leader key to space
 vim.g.mapleader = " "
 
