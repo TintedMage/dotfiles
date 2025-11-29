@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Hyprland
+Comment=An intelligent dynamic tiling Wayland compositor
+Exec=sh -c "Hyprland > /dev/null 2>&1"
+Type=Application
+DesktopNames=Hyprland
+Keywords=tiling;wayland;compositor;

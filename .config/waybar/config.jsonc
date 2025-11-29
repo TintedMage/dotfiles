@@ -9,7 +9,6 @@
         "custom/arch",
         "clock",
         "custom/dgpu-state"
-
     ],
     "modules-center": [
         "hyprland/workspaces"
