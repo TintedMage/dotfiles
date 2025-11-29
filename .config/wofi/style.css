@@ -56,7 +56,7 @@ Wofi : ~/.config/wofi/style.css
 @define-color mantle-rgb rgb(30, 32, 48);
 @define-color crust #181926;
 @define-color crust-rgb rgb(24, 25, 38);
-@define-color transparent-base rgba(00, 00, 00, 0.1);
+@define-color transparent-base rgba(00, 00, 00, 0.5);
 
 * {
   font-family: 'JetBrainsMono Nerd Font', monospace;

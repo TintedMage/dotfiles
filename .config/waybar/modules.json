@@ -59,9 +59,9 @@
 
     "network": {
         "format-wifi": "",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "{essid}",
         "tooltip-format": "{essid} - {gwaddr}",
-        "format-linked": "{ifname} (No IP) ",
+        "format-linked": "",
         "format-disconnected": "󰖪",
         "on-click": "networkmanager_dmenu"
     },
@@ -84,6 +84,7 @@
         "format-charging": "󱐋  {capacity}%",
         "format-plugged": "  {capacity}%",
         "format-alt": "{capacity}  {icon}",
+        "on-click": "/home/tinted/.config/waybar/scripts/power-menu.sh",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰂀", "󰁹"]
     },
 
