@@ -1,9 +1,9 @@
 # =======================================
 # Tinted Hyprland
 # Author: TintedMage (https://github.com/TintedMage)
-# Dunst: ~/.config/dunst/dunstrc
+# mako: ~/.config/mako/makorc
 # ========================================
-# See dunst(5) for all configuration options
+# See mako(5) for all configuration options
 
 [global]
     ### Display ###
@@ -11,7 +11,7 @@
     follow = none
 
     ### Geometry ###
-    width = (0, 400)
+    width = 400
     height = (0, 400)
     origin = top-right
     offset = (10, 50)
@@ -67,17 +67,17 @@
     history_length = 20
 
     ### Misc/Advanced ###
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/dmenu -p mako:
     browser = /usr/bin/xdg-open
     always_run_script = true
-    title = Dunst
-    class = Dunst
+    title = mako
+    class = mako
     corner_radius = 10
     corners = all
     ignore_dbusclose = false
 
     ### Wayland ###
-    force_xwayland = false
+    force_xwayland = true
     force_xinerama = false
 
     ### mouse
@@ -149,7 +149,7 @@
 # GLib based applications export their desktop-entry name. In comparison to the appname,
 # the desktop-entry won't get localized.
 #
-# You can also allow a notification to appear even when paused. Notification will appear whenever notification's override_pause_level >= dunst's paused level.
+# You can also allow a notification to appear even when paused. Notification will appear whenever notification's override_pause_level >= mako's paused level.
 # This can be used to set partial pause modes, where more urgent notifications get through, but less urgent stay paused. To do that, you can override the following in the rules:
 # override_pause_level = X
 
@@ -160,7 +160,7 @@
 #   script appname summary body icon urgency
 # where urgency can be "LOW", "NORMAL" or "CRITICAL".
 #
-# NOTE: It might be helpful to run dunst -print in a terminal in order
+# NOTE: It might be helpful to run mako -print in a terminal in order
 # to find fitting options for rules.
 
 # Disable the transient hint so that idle_threshold cannot be bypassed from the
@@ -189,11 +189,11 @@
 
 #[espeak]
 #    summary = "*"
-#    script = dunst_espeak.sh
+#    script = mako_espeak.sh
 
 #[script-test]
 #    summary = "*script*"
-#    script = dunst_test.sh
+#    script = mako_test.sh
 
 #[ignore]
 #    # This notification will not be displayed
