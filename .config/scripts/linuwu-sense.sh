@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TRIGGER_FILE="/etc/update_linuwu_sense"
-PROJECT_DIR="/home/tinted/Linuwu-Sense"
+PROJECT_DIR="~/Linuwu-Sense"
 
 # Exit immediately if the kernel wasn't updated
 [ -f "$TRIGGER_FILE" ] || exit 0
@@ -19,8 +19,8 @@ fi
 # Delete the primary trigger file so it doesn't run next time
 sudo rm -f "$TRIGGER_FILE"
 
-touch /home/tinted/test.sh
+touch ~/test.sh
 
-/usr/bin/notify-send -u critical -i 'system-run' "$TITLE" "Linuwu-Sense project tasks complete."
+t/usr/bin/notify-send -u critical -i 'system-run' "$TITLE" "Linuwu-Sense project tasks complete."
 
 exit 0

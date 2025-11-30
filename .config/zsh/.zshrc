@@ -28,7 +28,7 @@
 # Completion System
     # Initializes and configures tab completion with caching
     # The following lines were added by compinstall
-    zstyle :compinstall filename '/home/tinted/.config/zsh/.zshrc'
+    zstyle :compinstall filename '~/.config/zsh/.zshrc'
     autoload -Uz compinit
     # Shamelessly borrowed from Prezto. Regenerates the completion cache approximately daily.
     export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
