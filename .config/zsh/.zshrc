@@ -40,6 +40,9 @@
     fi
     unset _comp_files
 
+    # Enable case-insensitive and case-sensitive matching
+    zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
 # Prompt Configuration
     autoload -U colors && colors
     eval "$(starship init zsh)"

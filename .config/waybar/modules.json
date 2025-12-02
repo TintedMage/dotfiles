@@ -4,14 +4,14 @@
         "format": "󰣇",
         "tooltip": true,
         "tooltip-format": "This is Arch btw",
-        "on-click": "wofi --show drun"
+        "on-click": "wlogout"
+
     },
 
     "custom/dgpu-state": {
         "exec": "cat /sys/bus/pci/devices/0000:01:00.0/power/runtime_status",
         "interval": 5,
-        "format": "   󰍹   {}",
-        "on-click": "alacritty -e vim /path/to/your/file.txt"
+        "format": "   󰍹   {}"
     },
 
     "custom/brightness": {
@@ -84,7 +84,6 @@
         "format-charging": "󱐋  {capacity}%",
         "format-plugged": "  {capacity}%",
         "format-alt": "{capacity}  {icon}",
-        "on-click": "~/.config/waybar/scripts/power-menu.sh",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰂀", "󰁹"]
     },
 

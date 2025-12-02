@@ -15,6 +15,7 @@ window#waybar {
     color: #ffffff;
     font-family: "SpaceMono Nerd Font", feather;
     transition: background-color 0.5s;
+    border: 10px solid transparent;
 }
 
 /* Containers */
