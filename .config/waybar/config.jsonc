@@ -23,7 +23,8 @@
         "pulseaudio",
         "custom/brightness",
         "temperature",
-        "battery"
+        "battery",
+        "custom/notification"
     ],
     //Modules configuration
 

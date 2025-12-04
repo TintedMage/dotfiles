@@ -111,3 +111,7 @@ window#waybar {
 #custom-arch:hover {
     color: #1793d1;
 }
+
+#custom-notification {
+  font-family: "MesloLGS Nerd Font";
+}
