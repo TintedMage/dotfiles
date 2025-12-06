@@ -86,7 +86,7 @@ window {
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color: none;
+  background-color: transparent;
   animation: fadeIn 0.5s ease-in-out both;
 }
 
@@ -104,14 +104,14 @@ window {
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color: none;
+  background-color: transparent;
 }
 
 #scroll {
   margin: 0px;
   padding: 10px;
   border: none;
-  background-color: none;
+  background-color: transparent;
 }
 
 #input {
@@ -130,7 +130,7 @@ window {
 }
 
 #input * {
-  outline: 4px solid @red!important;
+  outline: 4px solid @red;
 }
 
 #text {
@@ -158,5 +158,5 @@ window {
 }
 
 #entry:drop(active) {
-  background-color: @lavender!important;
+  background-color: @lavender;
 }
