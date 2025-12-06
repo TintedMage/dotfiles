@@ -1,4 +1,3 @@
-
 {
     "custom/arch": {
         "format": "󰣇",
@@ -40,8 +39,8 @@
         "interval": 2,
         "format": "   {}%",
         "tooltip": true,
-        "on-scroll-up": "~/.config/hypr/scripts/brightness.sh up",
-        "on-scroll-down": "~/.config/hypr/scripts/brightness.sh down",
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-",
         "on-click": "notify-send 'Brightness' 'Use scroll wheel to adjust brightness'",
         "exec-if": "which brightnessctl"
     },
@@ -75,10 +74,10 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "~/.config/hypr/scripts/volume.sh mute",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-right": "pavucontrol",
-        "on-scroll-up": "~/.config/hypr/scripts/volume.sh up",
-        "on-scroll-down": "~/.config/hypr/scripts/volume.sh down"
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     },
 
     "network": {

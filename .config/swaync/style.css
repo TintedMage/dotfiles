@@ -115,8 +115,6 @@
 .control-center {
   background: var(--background);
   border: 2px solid #00ffff;
-  border-radius: 15px;
-  margin: 5px;
   padding: 12px;
 }
 
