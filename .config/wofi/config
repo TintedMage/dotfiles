@@ -7,6 +7,6 @@ term=kitty
 hide_scroll=false
 print_command=true
 insensitive=true
-prompt= Baka
+prompt= press ESC to close
 columns=2
 dynamic_lines=true

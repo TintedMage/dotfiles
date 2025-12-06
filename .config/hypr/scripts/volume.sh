@@ -52,7 +52,12 @@ send_notification() {
     fi
     
     # Send notification with progress bar
-    notify-send -a 'wp-vol' -r "$OSD_ID" -t 1500 -h int:value:$VOLUME_HINT -i "$ICON" " $MUTE_STATUS: $VOLUME_DISPLAY%"
+    notify-send -a 'wp-vol' \
+      -h string:x-canonical-private-synchronous:vol-osd \
+      -h int:value:"$VOLUME_HINT" \
+      -t 1500 \
+      -i "$ICON" \
+      "$MUTE_STATUS: $VOLUME_DISPLAY%"
 }
 
 # --- Main Logic ---

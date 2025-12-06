@@ -41,7 +41,12 @@ send_notification() {
     fi
     
     # Send notification with progress bar
-    notify-send -a 'wp-brightness' -r "$OSD_ID" -t 1500 -h int:value:$BRIGHTNESS_HINT -i "$ICON" "Brightness: $BRIGHTNESS_HINT%"
+    notify-send -a 'wp-brightness' \
+      -h string:x-canonical-private-synchronous:brightness-osd \
+      -h int:value:"$BRIGHTNESS_HINT" \
+      -t 1500 \
+      -i "$ICON" \
+      "Brightness: $BRIGHTNESS_HINT%"
 }
 
 # --- Main Logic ---

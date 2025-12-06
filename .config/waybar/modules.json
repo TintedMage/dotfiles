@@ -4,7 +4,7 @@
         "format": "󰣇",
         "tooltip": true,
         "tooltip-format": "This is Arch btw",
-        "on-click": "wlogout"
+        "on-click": "wofi --show drun"
 
     },
 
@@ -40,8 +40,8 @@
         "interval": 2,
         "format": "   {}%",
         "tooltip": true,
-        "on-scroll-up": "brightnessctl set +5%",
-        "on-scroll-down": "brightnessctl set 5%-",
+        "on-scroll-up": "~/.config/hypr/scripts/brightness.sh up",
+        "on-scroll-down": "~/.config/hypr/scripts/brightness.sh down",
         "on-click": "notify-send 'Brightness' 'Use scroll wheel to adjust brightness'",
         "exec-if": "which brightnessctl"
     },
@@ -75,7 +75,10 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "~/.config/hypr/scripts/volume.sh mute",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.config/hypr/scripts/volume.sh up",
+        "on-scroll-down": "~/.config/hypr/scripts/volume.sh down"
     },
 
     "network": {
